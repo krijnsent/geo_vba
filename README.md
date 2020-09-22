@@ -24,3 +24,8 @@ Add some excel functions to e.g. calculate distance between two points and the s
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+
+## Inspired by
+- http://www.cpearson.com/excel/LatLong.aspx
+- https://www.atsunday.com/2012/03/calculating-land-lot-area-with-gps.html
+
