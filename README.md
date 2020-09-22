@@ -3,8 +3,9 @@
 A project to bring geography to VBA. Creating geometric models to make geographical calculations easier.
 Building on code examples from [LeafletJS](https://github.com/Leaflet/Leaflet)
 
-General direction of code (TODO):
-# Create a scatterplot with a map background
+# General direction of code (TODO):
+
+## Create a scatterplot with a map background
 Input lat&lon min&max
 - array of tiles -> almost there :-)
 - download all tiles
@@ -12,11 +13,14 @@ Input lat&lon min&max
 - crop image
 - set as chart background
 
-# OSM
+## OSM
 Add various OpenStreetMap functions:
-1: using nominatim
-2: using overpass-turbo
-3: getting tiles
+- using nominatim
+- using overpass-turbo
+- getting tiles
 
-# Functions
+## Functions
 Add some excel functions to e.g. calculate distance between two points and the surface of a LatLng Box.
+
+## License
+[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
