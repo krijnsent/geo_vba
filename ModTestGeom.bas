@@ -1,5 +1,5 @@
 Attribute VB_Name = "ModTestGeom"
-'Source: https://github.com/krijnsent/crypto_vba
+'Source: https://github.com/krijnsent/geo_vba
 
 Sub RunTests()
 

@@ -7,9 +7,9 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+'Source: https://github.com/krijnsent/geo_vba
 ' CLASS MODULE CODE for latLng
-' following logic from https://leafletjs.com/reference-1.6.0.html#latlngbounds
-' https://excelmacromastery.com/vba-class-modules/
+' following logic from https://leafletjs.com/reference-1.7.1.html#latlngbounds
 'x = lon - East/West
 'y = lat - North/South
 
@@ -53,17 +53,24 @@ Public Function distanceTo(latLngIn As latLng) As Double
     Dim g As New geom
     
     ' convert to radians
-    Dim Lat1 As Double
-    Dim Lat2 As Double
+    Dim lat1 As Double
+    Dim lat2 As Double
     Dim Long1 As Double
     Dim Long2 As Double
-    Lat1 = g.Deg2Rad(latLngIn.lat)
-    Lat2 = g.Deg2Rad(clat)
+    lat1 = g.Deg2Rad(latLngIn.lat)
+    lat2 = g.Deg2Rad(clat)
     Long1 = g.Deg2Rad(latLngIn.lon)
     Long2 = g.Deg2Rad(clon)
     
-    Delta = ((2 * g.ArcSin(Sqr((Sin((Lat1 - Lat2) / 2) ^ 2) + Cos(Lat1) * Cos(Lat2) * (Sin((Long1 - Long2) / 2) ^ 2)))))
+    Delta = ((2 * g.ArcSin(Sqr((Sin((lat1 - lat2) / 2) ^ 2) + Cos(lat1) * Cos(lat2) * (Sin((Long1 - Long2) / 2) ^ 2)))))
     distanceTo = 1000 * g.C_RADIUS_EARTH_KM * Delta
+
+End Function
+
+Public Function bearingsTo(latLngIn As latLng) As Double
+
+    'Direction in degrees from one coordinate to another, TODO
+
 
 End Function
 

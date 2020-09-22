@@ -18,22 +18,22 @@ Private clatmin As Double
 Private clonmin As Double
 
 ' Properties
-Public Sub latLngBounds(coord1 As latLng, coord2 As latLng)
+Public Sub latLngBounds(Coord1 As latLng, Coord2 As latLng)
     
-    If coord1.lat > coord2.lat Then
-        clatmax = coord1.lat
-        clatmin = coord2.lat
+    If Coord1.lat > Coord2.lat Then
+        clatmax = Coord1.lat
+        clatmin = Coord2.lat
     Else
-        clatmax = coord2.lat
-        clatmin = coord1.lat
+        clatmax = Coord2.lat
+        clatmin = Coord1.lat
     End If
 
-    If coord1.lon > coord2.lon Then
-        clonmax = coord1.lon
-        clonmin = coord2.lon
+    If Coord1.lon > Coord2.lon Then
+        clonmax = Coord1.lon
+        clonmin = Coord2.lon
     Else
-        clonmax = coord2.lon
-        clonmin = coord1.lon
+        clonmax = Coord2.lon
+        clonmin = Coord1.lon
     End If
 
 End Sub
@@ -43,25 +43,25 @@ Public Sub setBounds(ArrIn As Variant)
 'Expecting one array containing 2 arrays with both 2 numbers, check for that first
 If IsArray(ArrIn) Then
     If UBound(ArrIn) = 1 Then
-       coord1 = ArrIn(0)
-       coord2 = ArrIn(1)
-       If IsArray(coord1) And IsArray(coord2) Then
-            If UBound(coord1) = 1 And UBound(coord2) = 1 Then
+       Coord1 = ArrIn(0)
+       Coord2 = ArrIn(1)
+       If IsArray(Coord1) And IsArray(Coord2) Then
+            If UBound(Coord1) = 1 And UBound(Coord2) = 1 Then
                 
-                If coord1(0) > coord2(0) Then
-                    clatmax = coord1(0)
-                    clatmin = coord2(0)
+                If Coord1(0) > Coord2(0) Then
+                    clatmax = Coord1(0)
+                    clatmin = Coord2(0)
                 Else
-                    clatmax = coord2(0)
-                    clatmin = coord1(0)
+                    clatmax = Coord2(0)
+                    clatmin = Coord1(0)
                 End If
             
-                If coord1(1) > coord2(1) Then
-                    clonmax = coord1(1)
-                    clonmin = coord2(1)
+                If Coord1(1) > Coord2(1) Then
+                    clonmax = Coord1(1)
+                    clonmin = Coord2(1)
                 Else
-                    clonmax = coord2(1)
-                    clonmin = coord1(1)
+                    clonmax = Coord2(1)
+                    clonmin = Coord1(1)
                 End If
                 
             End If

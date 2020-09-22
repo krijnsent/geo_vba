@@ -7,6 +7,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
+'Source: https://github.com/krijnsent/geo_vba
 'CLASS: geom
 'Call by:  Dim g As New geom
 'Alternative: application.worksheetfunction.sinh etc.
@@ -93,3 +94,24 @@ Public Function Min(value1, value2)
     End If
 End Function
 
+Public Function IsValidLat(value1) As Boolean
+
+IsValidLat = False
+If IsNumeric(value1) Then
+    If value1 > -90 And value1 < 90 Then
+        IsValidLat = True
+    End If
+End If
+
+End Function
+
+Public Function IsValidLon(value1) As Boolean
+
+IsValidLon = False
+If IsNumeric(value1) Then
+    If value1 > -180 And value1 <= 180 Then
+        IsValidLon = True
+    End If
+End If
+
+End Function
