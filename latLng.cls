@@ -74,19 +74,19 @@ Public Function bearingsTo(latLngIn As latLng) As Double
 
 End Function
 
-Public Function toTile(zoom) As tile
+Public Function toTile(Zoom) As tile
     
     Dim g As New geom
     Dim t As New tile
     
     lat_rad = g.Deg2Rad(lat)
-    n = 2 ^ zoom
+    n = 2 ^ Zoom
     xtile = Int((lon + 180) / 360 * n)
     ytile = Int((1 - g.ArcSinH(Tan(lat_rad)) / g.C_PI) / 2 * n)
     
     t.x = xtile
     t.y = ytile
-    t.z = zoom
+    t.z = Zoom
     
     Set toTile = t
 
