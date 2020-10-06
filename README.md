@@ -5,7 +5,7 @@ Building on code examples from [LeafletJS](https://github.com/Leaflet/Leaflet)
 
 ## Functions
 
-![Screen 1 - main geographical functions](https://github.com/krijnsent/geo_vba/blob/master/screen1.png?raw=true)
+![Screen 1 - main geographical functions](https://github.com/krijnsent/geo_vba/blob/master/img/screen1.png?raw=true)
 The default Excel function for distance is (D8 & D9 holding latitude, E8 and E9 holding longitude):
 =ACOS(COS(RADIANS(90-D9)) *COS(RADIANS(90-D8)) +SIN(RADIANS(90-D9)) *SIN(RADIANS(90-D8)) *COS(RADIANS(E9-E8))) *6370.97327862*1000
 The geo_vba version is:
@@ -20,7 +20,7 @@ And some more stuff like:
 =geo_earth_radius() (earth radius in kilometers)
 =geo_earth_radius("mi")
 
-![Screen 2 - OSM search & reverse search functions](https://github.com/krijnsent/geo_vba/blob/master/screen2.png?raw=true)
+![Screen 2 - OSM search & reverse search functions](https://github.com/krijnsent/geo_vba/blob/master/img/screen2.png?raw=true)
 Secondly, the formulas can pull in information from OSM nominatim to geocode an address:
 =geo_nom_search(C35)
 =geo_nom_search(C37,,FALSE,"lat,lon,display_name")
@@ -31,7 +31,7 @@ Or to see what is on a lat&lon location:
 =geo_nom_reverse(C41,D41,FALSE)
 =geo_nom_reverse(C42,D42,FALSE,"postcode,country_code")
 
-![Screen 3 - extract GPS data from images](https://github.com/krijnsent/geo_vba/blob/master/screen3.png?raw=true)
+![Screen 3 - extract GPS data from images](https://github.com/krijnsent/geo_vba/blob/master/img/screen3.png?raw=true)
 Extract latitude & longitude from an image (if it has that info), and a bit more:
 =geo_img_data(C67)
 =geo_img_data(C69,"DateTime,EquipMake,EquipModel,ExifPixXDim,ExifPixYDim")
