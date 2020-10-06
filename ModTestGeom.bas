@@ -93,3 +93,28 @@ Next t
 
 End Sub
 
+
+Sub TestIMG()
+
+
+MyDir = "C:\Users\Castoro\Pictures\desktopbackground\"
+MyFiles = Array("", "P1060345.GIF", "P1060345.jpg", "20180512_112401.jpg", "20190829_112142.jpg")
+
+For Each MyFile In MyFiles
+    Res = geo_img_data(MyDir & MyFile)
+    For i = LBound(Res, 2) To UBound(Res, 2)
+        Debug.Print MyFile, i, Res(0, i)
+    Next i
+Next MyFile
+
+
+For Each MyFile In MyFiles
+    Res = geo_img_data(MyDir & MyFile, "DateTime,EquipMake,EquipModel,ExifPixXDim,ExifPixYDim")
+    For i = LBound(Res, 2) To UBound(Res, 2)
+        Debug.Print MyFile, i, Res(0, i)
+    Next i
+Next MyFile
+
+
+
+End Sub

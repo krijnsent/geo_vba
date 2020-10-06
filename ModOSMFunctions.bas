@@ -32,7 +32,7 @@ End Sub
 
 Function geo_nom_reverse(lat As Double, lng As Double, Optional OneCellResult As Boolean = True, Optional ResCols As String = "all") As Variant()
 Attribute geo_nom_reverse.VB_Description = "OSM Nominatim reverse lookup: search for city, street etc of the given latitude & longitude."
-Attribute geo_nom_reverse.VB_ProcData.VB_Invoke_Func = " \n20"
+Attribute geo_nom_reverse.VB_ProcData.VB_Invoke_Func = " \n21"
 
     Dim resArr() As Variant
     Dim Url As String
@@ -110,7 +110,7 @@ End Function
 
 Function geo_nom_search(address As String, Optional NumberOfResults As Integer = 1, Optional OneCellResult As Boolean = True, Optional ResCols As String = "default") As Variant()
 Attribute geo_nom_search.VB_Description = "OSM Nominatim search: search for e.g. latitude & longitude for the street, city, etc."
-Attribute geo_nom_search.VB_ProcData.VB_Invoke_Func = " \n20"
+Attribute geo_nom_search.VB_ProcData.VB_Invoke_Func = " \n21"
 
     Dim resArr() As Variant
     Dim Url As String
