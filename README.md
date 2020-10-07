@@ -28,13 +28,17 @@ And some more stuff like:
 
 Secondly, the formulas can pull in information from OSM nominatim to geocode an address:
 > =geo_nom_search(C35)
+
 > =geo_nom_search(C37,,FALSE,"lat,lon,display_name")
+
 > =geo_nom_search(C36,,FALSE,"lat,lon,display_name,osm_type,osm_id")
 
 
 Or to see what is on a lat&lon location:
 > =geo_nom_reverse(C40,D40)
+
 > =geo_nom_reverse(C41,D41,FALSE)
+
 > =geo_nom_reverse(C42,D42,FALSE,"postcode,country_code")
 
 
@@ -42,6 +46,7 @@ Or to see what is on a lat&lon location:
 
 Extract latitude & longitude from an image (if it has that info), and a bit more:
 > =geo_img_data(C67)
+
 > =geo_img_data(C69,"DateTime,EquipMake,EquipModel,ExifPixXDim,ExifPixYDim")
 
 
